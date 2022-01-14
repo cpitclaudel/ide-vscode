@@ -1,35 +1,33 @@
 # Dafny for Visual Studio Code
 
-This extension adds _Dafny 3_ support to Visual Studio Code. If you require _Dafny 2_ support, consider using the [legacy extension](https://marketplace.visualstudio.com/items?itemName=correctnessLab.dafny-vscode-legacy).
-This VSCode plugin requires the Dafny language server (shipped with the Dafny release since v3.1.0). The plugin will install it automatically upon first use.
+This extension adds support for [Dafny 3](https://github.com/dafny-lang/dafny/) to Visual Studio Code.
 
 ## Features
 
-- Compatible to **Dafny 3.3.0**.
-- **Compile and Run** `.dfy` files.
-- **Verification** as one types.
-- **Syntax highlighting** thanks to [sublime-dafny](https://github.com/erggo/sublime-dafny). See file `LICENSE_sublime-dafny.rst` for license.
-- Display **CounterExample** for failing proof.
-- **IntelliSense** to suggest symbols.
-- **GoToDefinition** to quickly navigate.
-- **Hover Information** for symbols.
+- **Syntax highlighting**.
+- **Real-time verification**.
+- **Compilation and execution** of `.dfy` files.
+- **Counter-example display** for failing proof.
+- **IntelliSense** for completion.
+- **Go-to-definition** to quickly navigate.
+- **Hover information** for symbols.
 
-You can find [examples below](#examples).
+You can find examples [below](#examples).
 
 ## Shortcuts
 
-| Shortcut                  | Description                                                                             |
-| :------------------------ | :-------------------------------------------------------------------------------------- |
-| `Ctrl+Shift+B` or `⇧+⌘+B` | Compile to `.dll` or, if there is a `Main` method, to `.exe` file                       |
-| `F5`                      | Compile and run, if the source file has a `Main` method                                 |
-| `F6`                      | Compile with custom arguments                                                           |
-| `F7`                      | Show _CounterExample_                                                                   |
-| `F8`                      | Hide _CounterExample_                                                                   |
+| Shortcut                   | Description                                                                             |
+| :------------------------- | :-------------------------------------------------------------------------------------- |
+| `Ctrl+Shift+B` or `⇧+⌘+B` | Compile to `.dll` or, if there is a `Main` method, to `.exe`                            |
+| `F5`                       | Compile and run, if the source file has a `Main` method                                 |
+| `F6`                       | Compile with custom arguments                                                           |
+| `F7`                       | Show counter example                                                                    |
+| `F8`                       | Hide counter example                                                                    |
 
 ## Requirements
 
-The plugin requires at least .NET Core 5.0 (the ASP.NET Core 5.0 runtime to be more specific) to run the _Dafny Language Server_. Please download a distribution from [Microsoft](https://dotnet.microsoft.com/download).
-When you first open a _Dafny_ file, the extension will prompt you to install .NET Core manually. The language server gets installed automatically.
+The plugin requires at least .NET Core 5.0 (the ASP.NET Core 5.0 runtime to be more specific) to run the Dafny language server. Please download a distribution from [Microsoft](https://dotnet.microsoft.com/download).
+When you first open a _Dafny_ file, the extension will prompt you to install .NET Core manually.  The language server gets installed automatically.
 
 ## Extension Settings
 
@@ -153,3 +151,9 @@ vsce package
 ### Coding Conventions
 
 We use ESLint with the TypeScript plugin to ensure code consistency across the whole source. Install the [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension in VSCode to have live feedback. Alternatively, you can check your code from the command line by running `npm run lint`.
+
+### Legacy extensions
+
+- If you require support for Dafny 2, consider using the [legacy extension](https://marketplace.visualstudio.com/items?itemName=correctnessLab.dafny-vscode-legacy).
+
+- In December 2021 this extension moved from `Correctness Lab` to `dafny-lang`.  The [previous version](https://marketplace.visualstudio.com/items?itemName=correctnesslab.dafny-vscode) is outdated.
